@@ -1,0 +1,250 @@
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+body #bg {
+  clip-path: polygon(100% 0, 100% 77%, 33% 100%, 0 100%, 0 0);
+  background-color: #943a80;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+@media (min-width: 840px) {
+  body #bg {
+    clip-path: polygon(0 0, 75% 0, 55% 100%, 0% 100%);
+  }
+}
+body img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px 0;
+}
+@media (min-width: 840px) {
+  main {
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-areas: 'primary card';
+  }
+}
+
+main section#card {
+  background: #f4f4f4;
+  padding: 20px;
+  margin: 1em auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 80%;
+}
+@media (min-width: 840px) {
+  main section#card {
+    grid-area: card;
+    height: fit-content;
+    align-self: center;
+    margin: 1em;
+  }
+}
+main section#card ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+main section#card ul li {
+  margin-bottom: 10px;
+}
+main section#card ul li span {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #bece28;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+main section#card ul li strong {
+  display: inline-block;
+  margin-left: 40px;
+  margin-top: 10px;
+}
+
+main section#card ul li b {
+  display: inline-block;
+  font-weight: 400;
+  margin-left: 40px;
+  margin-top: 10px;
+}
+
+main section#primary {
+  color: #f4f4f4;
+  padding: 15px;
+  text-align: center;
+}
+@media (min-width: 840px) {
+  main section#primary {
+    grid-area: primary;
+    text-align: left;
+    margin: 4em 0 0 4em;
+  }
+}
+main section#primary h1 {
+  font-size: 3em;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+@media (min-width: 840px) {
+  main section#primary h1 {
+    width: 30%;
+    font-size: 2.5em;
+    line-height: 0.9em;
+  }
+}
+main section#primary p#subtext {
+  font-size: 1.25em;
+  color: #f4f4f4;
+}
+main section#primary p {
+  font-size: 1em;
+}
+
+@media (min-width: 840px) {
+  main section#primary a {
+    display: inline-block;
+    padding: 15px 60px;
+  }
+}
+
+#feedback-page {
+  text-align: center;
+}
+
+#form-main {
+  width: 100%;
+  float: left;
+  padding-top: 0px;
+}
+
+#form-title {
+  color: #f4f4f4;
+}
+
+#form-div {
+  background-color: rgba(160, 160, 161, 0.4);
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 35px;
+  padding-bottom: 50px;
+  width: 450px;
+  float: left;
+  left: 50%;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: -260px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+}
+
+.feedback-input {
+  color: #3c3c3c;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 0;
+  line-height: 22px;
+  background-color: #f4f4f4;
+  padding: 13px 13px 13px 54px;
+  margin-bottom: 10px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 3px solid rgba(0, 0, 0, 0);
+}
+
+.feedback-input:focus {
+  background: #fff;
+  box-shadow: 0;
+  border: 3px solid #00a3dd;
+  color: #00a3dd;
+  outline: none;
+  padding: 13px 13px 13px 54px;
+}
+
+.focused {
+  color: #00a3dd;
+  border: #00a3dd solid 3px;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+input:hover,
+textarea:hover,
+input:focus,
+textarea:focus {
+  background-color: white;
+}
+
+#button-blue {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  float: left;
+  width: 100%;
+  border: #f4f4f4 solid 4px;
+  cursor: pointer;
+  background-color: #00a3dd;
+  color: white;
+  font-size: 24px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}
+
+#button-blue:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: #0057b8;
+}
+
+.submit:hover {
+  color: #0057b8;
+}
+
+.ease {
+  width: 0px;
+  height: 74px;
+  background-color: #f4f4f4;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.submit:hover .ease {
+  width: 100%;
+  background-color: #f4f4f4;
+}
+
+@media only screen and (max-width: 580px) {
+  #form-div {
+    left: 3%;
+    margin-right: 3%;
+    width: 88%;
+    margin-left: 0;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
