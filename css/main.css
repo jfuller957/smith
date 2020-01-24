@@ -5,11 +5,12 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
+  background-color: #943a80;
   margin: 0;
 }
 body #bg {
   clip-path: polygon(100% 0, 100% 77%, 33% 100%, 0 100%, 0 0);
-  background-color: #943a80;
+  background-color: #ffffff;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -20,9 +21,23 @@ body #bg {
     clip-path: polygon(0 0, 75% 0, 55% 100%, 0% 100%);
   }
 }
-body img {
+
+@media (max-width: 640px) {
+  body #bg {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+body img#hdrlogo {
   display: block;
   margin-left: auto;
+  margin-right: auto;
+  padding: 30px 0;
+}
+
+body img#ftrlogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   padding: 30px 0;
 }
 @media (min-width: 840px) {
@@ -80,7 +95,7 @@ main section#card ul li b {
 }
 
 main section#primary {
-  color: #f4f4f4;
+  color: #a0a0a1;
   padding: 15px;
   text-align: center;
 }
@@ -105,7 +120,6 @@ main section#primary h1 {
 }
 main section#primary p#subtext {
   font-size: 1.25em;
-  color: #f4f4f4;
 }
 main section#primary p {
   font-size: 1em;
@@ -129,11 +143,12 @@ main section#primary p {
 }
 
 #form-title {
-  color: #f4f4f4;
+  color: #a0a0a1;
 }
 
 #form-div {
-  background-color: rgba(160, 160, 161, 0.4);
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   padding-left: 35px;
   padding-right: 35px;
   padding-top: 35px;
@@ -149,7 +164,7 @@ main section#primary p {
 }
 
 .feedback-input {
-  color: #3c3c3c;
+  color: #a0a0a1;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 500;
   font-size: 18px;
@@ -201,7 +216,7 @@ textarea:focus {
   border: #f4f4f4 solid 4px;
   cursor: pointer;
   background-color: #00a3dd;
-  color: white;
+  color: #f4f4f4;
   font-size: 24px;
   padding-top: 22px;
   padding-bottom: 22px;
@@ -237,7 +252,7 @@ textarea:focus {
   background-color: #f4f4f4;
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 640px) {
   #form-div {
     left: 3%;
     margin-right: 3%;
